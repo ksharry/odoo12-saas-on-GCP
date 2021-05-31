@@ -35,3 +35,10 @@
     sudo apt-get upgrade
     sudo apt-get install nginx
     http://35.201.191.91/
+
+4. 申請DNS
+  > 
+    https://www.noip.com/
+    進行註冊
+    填寫三組網域(實際需要四組)
+    下載NO IP DCU
