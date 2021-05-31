@@ -133,3 +133,4 @@ server {
         location /longpolling {
              proxy_pass http://odoochat;
         }
+        
