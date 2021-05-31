@@ -9,13 +9,13 @@
 ![Alt text](https://github.com/ksharry/odoo12-saas-on-GCP/blob/main/png/5.png)
 
 2.  GCP/XSHELL 使用SSH連線
-  + XSHELL上使用工具/新使用者金鑰精靈(2048/RSA/空白)產生金鑰
-  + 上傳到GOOGLE指令
-    + cd ~/.ssh
-    + vi authorized_keys
-    + 貼上XSHELL產生的金鑰
-  + 設定XSHELL連線(PORT:22/IP/PUBLIC KEY連線)
-  + 到GCP 使用sudo passwd username 修改使用者密碼，並新增sudo權限 sudo adduser username sudo(需重新連線才啟用)
+    + XSHELL上使用工具/新使用者金鑰精靈(2048/RSA/空白)產生金鑰
+    + 上傳到GOOGLE指令
+      + cd ~/.ssh
+      + vi authorized_keys
+      + 貼上XSHELL產生的金鑰
+    + 設定XSHELL連線(PORT:22/IP/PUBLIC KEY連線)
+    + 到GCP 使用sudo passwd username 修改使用者密碼，並新增sudo權限 sudo adduser username sudo(需重新連線才啟用)
 
 3.  安裝ODOO
   > 
