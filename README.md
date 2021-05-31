@@ -42,3 +42,23 @@
     進行註冊
     填寫三組網域(實際需要四組)
     下載NO IP DCU
+
+5. 設定nginx代理伺服器
+  > 
+    切換路徑至 /etc/nginx/site avaiable/default
+    sudo chmod R 777 default    #設定default
+    server {
+        listen 80;
+        server_name ksharry.ddns.net;
+        root /var/www/example.com;
+        location / {
+             proxy_pass http://127.0.0.1:8069;
+             proxy_redirect off;
+             proxy_set_header Host $host;
+             proxy_set_header X-Real-IP $remote_addr;
+             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+             proxy_set_header X-Forwarded-Proto $scheme;
+        }
+        sudo /etc/init.d/nginx restart  #重啟
+        輸入網址 : http://xxx.xxx.xxx.xxx  如能正常 顯示則代表 nginx 設定 成功
+        
