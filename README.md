@@ -137,3 +137,26 @@
         sudo chmod R 777 odoo-server.conf
         sudo service odoo-server start
         驗證網址是否 有 https
+        查看狀態systemctl status nginx.service
+
+9. winscp設定
+  > 
+    修改SSH設定檔# vi /etc/ssh/sshd_config
+    修改地方是
+    LoginGraceTime 指定時間
+    PermitRootLogin yes
+    StrictModes yes
+    PasswordAuthentication yes
+    /etc/init.d/ssh restart
+    
+10. 上傳模組、設定權限、修改.conf
+
+11. 安裝 SaaS 依賴套件
+  > 
+    sudo pip 3 install --upgrade setuptools
+    sudo pip3 install --upgrade pip
+    sudo pip3 install boto;sudo pip3 install rotate_backups_s3;sudo pip3 install pysftp;sudo pip3 install oauthlib;sudo pip3 install Simplejson;sudo pip3 install
+num2words
+    sudo pip3 uninstall pyopenssl
+    sudo pip3 install pyopenssl
+    sudo service odoo-server restart
