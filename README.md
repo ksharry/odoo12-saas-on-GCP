@@ -83,17 +83,17 @@
   > 
     upstream odoo {
         server 127.0.0.1:8069;
-}
+    }
+  
+    upstream odoochat {
+          server 127.0.0.1:8072;
+    }
 
-upstream odoochat {
-        server 127.0.0.1:8072;
-}
-
-server {
-        listen 80;
-        server_name ksharry.ddns.net;
-        rewrite ^(.*) https://$host$1 permanent;
-}
+    server {
+          listen 80;
+          server_name ksharry.ddns.net;
+          rewrite ^(.*) https://$host$1 permanent;
+    }
 
 server {
         listen 443;
