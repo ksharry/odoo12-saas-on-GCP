@@ -95,7 +95,7 @@
           rewrite ^(.*) https://$host$1 permanent;
     }
 
-server {
+    server {
         listen 443;
         server_name ksharry.ddns.net;
         proxy_read_timeout 720s;
