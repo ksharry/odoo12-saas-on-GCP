@@ -22,7 +22,7 @@
     sudo wget https://raw.githubusercontent.com/Yenthe666/InstallScript/12.0/odoo_install.sh
     sudo chmod +x odoo_install.sh
     sudo ./odoo_install.sh
-    sudo service-odoo server start
+    sudo service odoo-server start
     http://35.201.191.91:8069/web/database/selector
     
 ![Alt text](https://github.com/ksharry/odoo12-saas-on-GCP/blob/main/png/6.png)
@@ -159,3 +159,9 @@
     sudo pip3 uninstall pyopenssl
     sudo pip3 install pyopenssl
     sudo service odoo-server restart
+
+11. 進入系統 建立 資料庫
+  > 
+    https://ksharry.ddns.net/web/database/selector
+    資料庫名稱為 ksharry.ddns.net
+    重新開機 sudo reboot
