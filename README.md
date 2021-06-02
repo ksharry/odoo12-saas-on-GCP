@@ -147,7 +147,7 @@
     PermitRootLogin yes
     StrictModes yes
     PasswordAuthentication yes
-    /etc/init.d/ssh restart
+    重新啟動 /etc/init.d/ssh restart
     
 10. 上傳模組、設定權限、修改.conf
 
@@ -155,8 +155,7 @@
   > 
     sudo pip 3 install --upgrade setuptools
     sudo pip3 install --upgrade pip
-    sudo pip3 install boto;sudo pip3 install rotate_backups_s3;sudo pip3 install pysftp;sudo pip3 install oauthlib;sudo pip3 install Simplejson;sudo pip3 install
-num2words
+    sudo pip3 install boto;sudo pip3 install rotate_backups_s3;sudo pip3 install pysftp;sudo pip3 install oauthlib;sudo pip3 install Simplejson;sudo pip3 install num2words
     sudo pip3 uninstall pyopenssl
     sudo pip3 install pyopenssl
     sudo service odoo-server restart
