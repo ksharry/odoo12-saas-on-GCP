@@ -45,7 +45,7 @@
 
 5. 設定nginx代理伺服器
   > 
-    切換路徑至 /etc/nginx/site avaiable/default
+    切換路徑至 /etc/nginx/sites-available/default
     sudo chmod -R 777 default    #設定default
     server {
         listen 80;
@@ -73,7 +73,7 @@
 
 7. 設定SSL
   > 
-    sudo certbot --nginx certonly
+    sudo certbot --nginx certonly 調整 sudo certbot --nginx
     輸入 E mail
     同意條款
     行銷用途
@@ -133,4 +133,7 @@
         location /longpolling {
              proxy_pass http://odoochat;
         }
-        
+        sudo service nginx restart
+        sudo chmod R 777 odoo-server.conf
+        sudo service odoo-server start
+        驗證網址是否 有 https
